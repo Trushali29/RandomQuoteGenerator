@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Random Quote Generator</title>
+        <link rel="stylesheet" href="../Quote_Generator/style.css"/>
+    </head>
+    <body id="main-body">
+        <div class = "quote_box flex-container">
+            <p class = "quote" id="text">You may be disappointed if you fail, but you are doomed if you don’t try.</p>
+            <p class= "author" id="name">- Beverly Sills</p>
+            <input id="quote_btn" class="new_quote_btn" type="button" value="New Quote" onclick="getRandomQuote()"></input>
+        </div>
+        <script type="text/javascript"> 
+            const data = 
+            [   {"quote":"Life isn’t about getting and having, it’s about giving and being.","author":"Kevin Kruse"},
+                {"quote":"Whatever the mind of man can conceive and believe, it can achieve.","author":"Napoleon Hill"},
+                {"quote":"Strive not to be a success, but rather to be of value.","author":"Albert Einstein"},
+                {"quote":"Two roads diverged in a wood, and I—I took the one…raveled by, And that has made all the difference.","author":"Robert Frost"},
+                {"quote":"You miss 100% of the shots you don’t take.","author":"Wayne Gretzky"},
+                {"quote":"You may be disappointed if you fail, but you are doomed if you don’t try.","author":"Beverly Sills"},
+                {"quote":"I would rather die of passion than of boredom.","author":"Vincent van Gogh"},
+                {"quote":"Definiteness of purpose is the starting point of all achievement.","author":"W. Clement Stone"},
+                {"quote":"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.","author":"Mark Twain"},
+                {"quote":"The two most important days in your life are the day you are born and the day you find out why.","author":"Mark Twain"}
+            ]
+            const color = ['Tomato','DarkKhaki','MediumPurple','RebeccaPurple','SlateBlue','LimeGreen','DarkOliveGreen','SteelBlue','Sienna',"LavenderBlush","deeppink","hotpink","	rosybrown",""];
+            console.log(data);
+            function getRandomValue(){
+                let max = data.length - 1;
+                let min = 0;
+                const value = Math.floor(Math.random() * (max - min + 1)) + min;
+                //console.log(max,min,value);
+                return data[value];
+            }
+            function getRandomColor(){
+                let max = color.length - 1;
+                let min = 0;
+                const value = Math.floor(Math.random() * (max - min + 1)) + min;
+                console.log(max,min,value);
+                return color[value];
+            }
+            function getRandomQuote(){
+                document.getElementById("main-body").style.transition = "all 2s";
+                const res = getRandomValue();
+                document.getElementById('text').innerHTML = res.quote;
+                document.getElementById('name').innerHTML = '- '+res.author;
+                // change the background color
+                const color_value = getRandomColor();
+                document.getElementById('main-body').style.backgroundColor = color_value;
+                document.getElementById('text').style.color = color_value;
+                document.getElementById('name').style.color = color_value;
+                document.getElementById('quote_btn').style.backgroundColor = color_value;
+                console.log(getRandomColor());
+            }
+           
+        </script>
+    </body>
+</html>

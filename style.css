@@ -1,0 +1,74 @@
+#main-body{
+    margin: auto;
+    margin-top: 250px;
+    width:46%;
+    font-family: "Times New Roman", Times, serif;
+    /*margin: 260px 450px 260px 450px;*/
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* flex-flow : column wrap; */
+    justify-content: center;
+    align-content: center;
+    font-size:27px;
+    background-color: white;
+    border-radius: 30px;
+    color: MediumPurple;
+}
+body{
+    background-color: mediumPurple;
+}
+.quote{
+    font-weight: bold;
+    padding:20px;
+}
+.author{
+    font-size: 25px;
+    align-self: center;
+    padding-bottom: 10px;
+    font-weight: lighter;
+}
+.new_quote_btn{
+    align-self: center;
+    margin-bottom: 20px;
+    background-color: MediumPurple;
+    border: 0px solid MediumPurple;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.new_quote_btn:hover{
+    background-color: rgb(147, 112, 216);
+    opacity: 0.9;
+}
+
+@media screen and (max-width:1540px) {
+    #main-body{
+        width:46%;
+    }
+}
+@media screen and (max-width:1470px) {
+    #main-body{
+        width:48%;
+    }
+}
+@media screen and (max-width:1200px) {
+    #main-body{
+        width:55%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #main-body{
+        width:60%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #main-body{
+        width:80%;
+    }
+}
