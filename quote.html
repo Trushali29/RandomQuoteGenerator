@@ -45,12 +45,11 @@
                 document.getElementById('text').innerHTML = res.quote;
                 document.getElementById('name').innerHTML = '- '+res.author;
                 // change the background color
-                const color_value = getRandomColor();
-                document.getElementById('main-body').style.backgroundColor = color_value;
-                document.getElementById('text').style.color = color_value;
-                document.getElementById('name').style.color = color_value;
-                document.getElementById('quote_btn').style.backgroundColor = color_value;
-                console.log(getRandomColor());
+                const get_color = getRandomColor();
+                document.getElementById('main-body').style.backgroundColor = getRandomColor();
+                document.getElementById('text').style.color = get_color;
+                document.getElementById('name').style.color = get_color;
+                document.getElementById('quote_btn').style.backgroundColor = getRandomColor();
             }
            
         </script>
